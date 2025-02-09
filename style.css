@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  background: #cccccc;
+  min-height: 100vh;
+  font-family: Comic Sans MS;
+}
+
+.content-area {
+  flex: 1;
+  padding: 20px;
+  background: #ffff99;
+}
+
+.file-nav {
+  width: 60px;
+  background: #666666;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.file-btn {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  background: #999999;
+  border: 3px solid red;
+  color: blue;
+  cursor: pointer;
+}
+
+.file-btn.active {
+  background: pink;
+}
+
+.card-container {
+  perspective: 1000px;
+  height: 300px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ff8080;
+  border: 5px dashed green;
+  padding: 20px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #80ff80;
+}
+
+.word {
+  font-size: 30px;
+  color: purple;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.pronunciation {
+  font-size: 20px;
+  color: #ff00ff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audio-btn {
+  padding: 10px;
+  background: yellow;
+  border: 2px dotted blue;
+  cursor: pointer;
+  min-width: 100px;
+  min-height: 44px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: orange;
+  border: 3px solid brown;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 100px;
+}
+
+.quiz-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #99ffcc;
+  border: 4px ridge purple;
+}
+
+.quiz-question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: red;
+  text-align: center;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-option {
+  padding: 15px;
+  background: #ffcc99;
+  border: 2px dotted blue;
+  cursor: pointer;
+  min-height: 44px;
+  text-align: center;
+}
+
+.quiz-option.correct {
+  background: lime;
+}
+
+.quiz-option.wrong {
+  background: red;
+}
+
+.quiz-option.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.quiz-next {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background: magenta;
+  border: 3px dashed yellow;
+  min-height: 44px;
+}
+
+.quiz-next.show {
+  display: block;
+}
+
+.pronunciation-container {
+  padding: 20px;
+  background: #ffccff;
+}
+
+.pronunciation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.word-card {
+  border: 3px dotted orange;
+  padding: 10px;
+  background: #ccffcc;
+  cursor: pointer;
+  text-align: center;
+}
+
+.word-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid blue;
+}
+
+.word-card.correct {
+  background: lime;
+}
+
+.word-card.wrong {
+  background: red;
+}
+
+.score-display {
+  text-align: center;
+  font-size: 24px;
+  color: purple;
+  text-decoration: underline wavy red;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  .file-nav {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .file-btn {
+    width: 50px;
+    margin: 0;
+  }
+
+  .content-area {
+    padding-bottom: 80px;
+  }
+
+  .card-container {
+    height: 250px;
+    margin: 10px auto;
+  }
+
+  .word {
+    font-size: 24px;
+  }
+
+  .pronunciation {
+    font-size: 16px;
+  }
+
+  .quiz-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .quiz-question {
+    font-size: 20px;
+  }
+
+  .pronunciation-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .word-card img {
+    height: 120px;
+  }
+
+  .audio-btn,
+  .nav-btn,
+  .quiz-option,
+  .quiz-next {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .word {
+    font-size: 20px;
+  }
+
+  .pronunciation {
+    font-size: 14px;
+  }
+
+  .card-container {
+    height: 200px;
+  }
+
+  .pronunciation-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .word-card img {
+    height: 100px;
+  }
+}
