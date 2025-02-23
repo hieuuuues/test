@@ -1,5 +1,4 @@
-function _0x5edf() {
-  const _0xeb800b = [
+  const _0xeb800b = 
     "/bʊk/",
     "wrong",
     "show",
@@ -294,10 +293,9 @@ function updateQuiz() {
       ((_0x542eee[_0x33cb53(0x23e)] = _0x28cca8[_0x33cb53(0x259)][_0x28965e]),
       (_0x542eee[_0x33cb53(0x20a)] = "quiz-option"),
       (_0x542eee["onclick"] = () => checkAnswer(_0x28965e)));
-  });
-  const _0x66b19a = document["querySelector"](_0x339e63(0x22c));
+ 0x66b19a = document["querySelector"](_0x339e63(0x22c));
   if (_0x66b19a) _0x66b19a["classList"][_0x339e63(0x21b)]("show");
-}
+
 function checkAnswer(_0x5d335e) {
   const _0x45ed05 = _0x3696eb,
     _0x460694 = quizData[currentQuizIndex];
@@ -311,10 +309,10 @@ function checkAnswer(_0x5d335e) {
       playAudio(_0x460694["options"][_0x5d335e]))
     : (_0xe4d0cb[_0x5d335e][_0x45ed05(0x255)][_0x45ed05(0x23f)](
         _0x45ed05(0x1f6)
-      ),
+
       _0xe4d0cb[_0x460694[_0x45ed05(0x253)]][_0x45ed05(0x255)]["add"](
         "correct"
-      ));
+
   const _0xb5f034 = document[_0x45ed05(0x254)](_0x45ed05(0x22c));
   if (_0xb5f034)
     _0xb5f034[_0x45ed05(0x255)][_0x45ed05(0x23f)](_0x45ed05(0x1f7));
@@ -332,7 +330,7 @@ function initializePronunciationMode() {
         _0x473c15(0x25b) +
         encodeURIComponent(
           "\x0a\x20\x20<svg\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20width=\x22150\x22\x20height=\x22150\x22\x20viewBox=\x220\x200\x20150\x20150\x22>\x0a\x20\x20\x20\x20<rect\x20width=\x22150\x22\x20height=\x22150\x22\x20fill=\x22#f0f0f0\x22/>\x0a\x20\x20\x20\x20<text\x20x=\x2275\x22\x20y=\x2275\x22\x20text-anchor=\x22middle\x22\x20fill=\x22#999\x22>Image\x20not\x20found</text>\x0a\x20\x20</svg>\x0a"
-        );
+      
       (_0x51ca6e["innerHTML"] =
         _0x473c15(0x215) +
         _0x5cbd7b["image"] +
@@ -368,10 +366,9 @@ function startPronunciationGame() {
     (_0x2f913d) => {
       const _0x2a19fd = _0x56b307;
       _0x2f913d[_0x2a19fd(0x24a)][_0x2a19fd(0x21f)] = _0x2a19fd(0x24e);
-    }
-  ),
+
     nextGameQuestion();
-}
+
 function endPronunciationGame() {
   const _0x511538 = _0x3696eb;
   isGameMode = ![];
@@ -383,7 +380,7 @@ function endPronunciationGame() {
     const _0x361edb = _0x511538;
     _0x1f2e1d["style"][_0x361edb(0x21f)] = _0x361edb(0x248);
   });
-}
+
 function nextGameQuestion() {
   const _0x11e98d = _0x3696eb;
   if (!pronunciationData["length"]) return;
@@ -435,14 +432,12 @@ function updateGameScore() {
     _0xaa5d5f = document[_0x591993(0x223)]("score"),
     _0x10fc96 = document[_0x591993(0x223)]("total-questions");
   if (_0xaa5d5f) _0xaa5d5f["textContent"] = gameScore;
-  if (_0x10fc96) _0x10fc96[_0x591993(0x23e)] = totalGameQuestions;
-}
+
 function changeMode(_0x404d6d) {
   const _0x2a528a = _0x3696eb;
   (currentMode = _0x404d6d),
     document[_0x2a528a(0x1f9)](_0x2a528a(0x235))["forEach"]((_0x4b1a80) =>
-      _0x4b1a80[_0x2a528a(0x255)][_0x2a528a(0x21b)](_0x2a528a(0x236))
-    );
+ 
   const _0x4670d7 = {
     flashcard: document[_0x2a528a(0x223)]("flashcard-mode"),
     quiz: document[_0x2a528a(0x223)](_0x2a528a(0x1f8)),
@@ -497,12 +492,11 @@ document["addEventListener"]("DOMContentLoaded", () => {
       const _0x4dcc9f = _0x5773a0;
       (currentQuizIndex =
         (currentQuizIndex + 0x1) % quizData[_0x4dcc9f(0x221)]),
-        updateQuiz();
-    }),
+ 
     updateCard(),
     updateQuiz(),
     initializePronunciationMode();
-}),
+
   document[_0x3696eb(0x22f)](_0x3696eb(0x1f2), function (_0x239b98) {
     const _0x5cba72 = _0x3696eb;
     _0x239b98[_0x5cba72(0x1fa)]();
@@ -514,4 +508,4 @@ document["addEventListener"]("DOMContentLoaded", () => {
         _0x22fbbc["shiftKey"] &&
         _0x22fbbc[_0x23cce5(0x22a)] === "I")) &&
       (_0x22fbbc[_0x23cce5(0x1fa)](), alert(_0x23cce5(0x25d)));
-  });
+
